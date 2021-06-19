@@ -1,0 +1,25 @@
+{
+  "name": "twredat",
+  "version": "1.0.0",
+  "description": "proiect tw ReDat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "mototoleacosmindavid",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mototoleacosmindavid/twredatCH.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mototoleacosmindavid/twredatCH/issues"
+  },
+  "homepage": "https://github.com/mototoleacosmindavid/twredatCH#readme",
+  "dependencies": {
+    "joi": "^17.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mariadb": "^2.5.3"
+  }
+}

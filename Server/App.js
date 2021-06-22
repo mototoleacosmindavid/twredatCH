@@ -31,6 +31,17 @@ class App {
             return
         }
         App.#server = http.createServer(async (req, res) => {
+            const headers = {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'OPTIONS, POST, GET',
+                'Access-Control-Max-Age': 2592000,
+                "Access-Control-Allow-Headers": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers"
+            }
+            if (req.method === 'OPTIONS') {
+                res.writeHead(204, headers);
+                res.end();
+                return;
+            }
             let sr = new RequestResponse(req, res)
             if (sr.method !== 'GET') {
                 sr.getSimpleBody()

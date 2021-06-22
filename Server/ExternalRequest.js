@@ -1,5 +1,7 @@
 const https = require('https');
 
+
+
 class ExternalRequest {
     static getFromUrl = (givenURL) => {
         return new Promise((resolve, reject) => {

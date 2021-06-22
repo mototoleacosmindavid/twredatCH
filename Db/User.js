@@ -32,11 +32,11 @@ class User {
         })
     }
 
-    static register(email, password, first_name, last_name) {
+    static register(email, password, first_name, last_name, reddit_username, reddit_password) {
         password = User.#passwordHashing(password)
         const command = {
-            sql: 'call Users_Register (?, ?, ?, ?)',
-            values: [email, password, first_name, last_name]
+            sql: 'call Users_Register (?, ?, ?, ?, ?, ?)',
+            values: [email, password, first_name, last_name, reddit_username, reddit_password]
         }
         return new Promise((resolve, reject) => {
             db.SQLCommand(command)

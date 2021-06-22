@@ -44,4 +44,9 @@ module.exports = {
         statusCode: 401,
         helper: null
     },
+    REDDIT_BAD_REQUEST: {
+        message: 'Bad reddit request',
+        statusCode: 400,
+        helper: null
+    }
 }

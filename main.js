@@ -13,6 +13,4 @@ new UserActions()
 new TagActions()
 new SubredditActions()
 
-
-
 app.listen(SERVER_PORT, () => console.log(`Server is now running on PORT ${SERVER_PORT} ...`))

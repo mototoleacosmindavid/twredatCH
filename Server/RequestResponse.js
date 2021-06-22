@@ -44,7 +44,13 @@ class RequestResponse {
     }
 
     sendJSON(obj, statusCode = 200) {
-        this.res.writeHead(statusCode, {'Content-Type': 'application/json'})
+        const headers = {
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'OPTIONS, POST, GET',
+            'Access-Control-Max-Age': 2592000, // 30 days,
+            'Content-Type': 'application/json'
+        };
+        this.res.writeHead(statusCode, headers)
         this.res.write(JSON.stringify(obj))
         this.res.end()
     }
